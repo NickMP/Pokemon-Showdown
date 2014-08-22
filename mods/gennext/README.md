@@ -274,8 +274,8 @@ Minor move changes:
   to 90 (this includes Aerial Ace, Disarming Voice, and Aura Sphere, among
   others)
 
-- Scald and Steam Eruption's damage is no longer affected by weather: instead,
-- they get 60% burn chance in sun
+- Scald and Steam Eruption's damage is no longer affected by weather:
+  instead, they get 60% burn chance in sun
 
 - High Jump Kick now has 100 base power
 
