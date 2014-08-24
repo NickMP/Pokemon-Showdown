@@ -461,7 +461,7 @@ Minor ability changes:
 - Aftermath no longer requires contact, and its damage is buffed to 1/3 of the
   foe's max HP
 
-- Cursed Body works like Afermath now, but instead of dealing damage, it
+- Cursed Body works like Aftermath now, but instead of dealing damage, it
   causes the foe to be Cursed (like Ghost-type Curse)
 
 - Gluttony allows a Pokemon to use a Berry twice.
