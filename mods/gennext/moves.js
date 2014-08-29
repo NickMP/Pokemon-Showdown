@@ -1333,6 +1333,7 @@ exports.BattleMovedex = {
 	slash: {
 		inherit: true,
 		basePower: 60,
+		onBasePowerPriority: 6,
 		onBasePower: function (power, user) {
 			if (user.template.id === 'persian') return power * 1.5;
 		},
