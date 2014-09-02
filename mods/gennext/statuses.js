@@ -112,6 +112,7 @@ exports.BattleStatuses = {
 	unown: {
 		// Unown: Shadow Tag
 		onImmunity: function (type) {
+			if attacker.hasAbility(['moldbreaker', 'teravolt', 'turboblaze'])
 			if (type === 'Ground') return false;
 		},
 		onStart: function (pokemon) {
@@ -128,6 +129,7 @@ exports.BattleStatuses = {
 	bronzong: {
 		// Bronzong: Heatproof
 		onImmunity: function (type) {
+			if attacker.hasAbility(['moldbreaker', 'teravolt', 'turboblaze'])
 			if (type === 'Ground') return false;
 		},
 		onStart: function (pokemon) {
@@ -140,6 +142,7 @@ exports.BattleStatuses = {
 	weezing: {
 		// Weezing: Aftermath
 		onImmunity: function (type) {
+			if attacker.hasAbility(['moldbreaker', 'teravolt', 'turboblaze'])
 			if (type === 'Ground') return false;
 		},
 		onStart: function (pokemon) {
@@ -152,6 +155,7 @@ exports.BattleStatuses = {
 	flygon: {
 		// Flygon: Compoundeyes
 		onImmunity: function (type) {
+			if attacker.hasAbility(['moldbreaker', 'teravolt', 'turboblaze'])
 			if (type === 'Ground') return false;
 		},
 		onStart: function (pokemon) {
@@ -164,6 +168,7 @@ exports.BattleStatuses = {
 	eelektross: {
 		// Eelektross: Poison Heal
 		onImmunity: function (type) {
+			if attacker.hasAbility(['moldbreaker', 'teravolt', 'turboblaze'])
 			if (type === 'Ground') return false;
 		},
 		onStart: function (pokemon) {
@@ -176,6 +181,7 @@ exports.BattleStatuses = {
 	claydol: {
 		// Claydol: Filter
 		onImmunity: function (type) {
+			if attacker.hasAbility(['moldbreaker', 'teravolt', 'turboblaze'])
 			if (type === 'Ground') return false;
 		},
 		onStart: function (pokemon) {
@@ -188,6 +194,7 @@ exports.BattleStatuses = {
 	gengar: {
 		// Gengar: Cursed Body
 		onImmunity: function (type, pokemon) {
+			if attacker.hasAbility(['moldbreaker', 'teravolt', 'turboblaze'])
 			if (pokemon.template.id !== 'gengarmega' && type === 'Ground') return false;
 		},
 		onStart: function (pokemon) {
@@ -200,6 +207,7 @@ exports.BattleStatuses = {
 	mismagius: {
 		// Mismagius: Cursed Body
 		onImmunity: function (type) {
+			if attacker.hasAbility(['moldbreaker', 'teravolt', 'turboblaze'])
 			if (type === 'Ground') return false;
 		},
 		onStart: function (pokemon) {
@@ -212,6 +220,7 @@ exports.BattleStatuses = {
 	mesprit: {
 		// Mesprit: Serene Grace
 		onImmunity: function (type) {
+			if attacker.hasAbility(['moldbreaker', 'teravolt', 'turboblaze'])
 			if (type === 'Ground') return false;
 		},
 		onStart: function (pokemon) {
@@ -224,6 +233,7 @@ exports.BattleStatuses = {
 	uxie: {
 		// Uxie: Synchronize
 		onImmunity: function (type) {
+			if attacker.hasAbility(['moldbreaker', 'teravolt', 'turboblaze'])
 			if (type === 'Ground') return false;
 		},
 		onStart: function (pokemon) {
@@ -236,6 +246,7 @@ exports.BattleStatuses = {
 	azelf: {
 		// Azelf: Steadfast
 		onImmunity: function (type) {
+			if attacker.hasAbility(['moldbreaker', 'teravolt', 'turboblaze'])
 			if (type === 'Ground') return false;
 		},
 		onStart: function (pokemon) {
@@ -248,6 +259,7 @@ exports.BattleStatuses = {
 	hydreigon: {
 		// Hydreigon: Sheer Force
 		onImmunity: function (type) {
+			if attacker.hasAbility(['moldbreaker', 'teravolt', 'turboblaze'])
 			if (type === 'Ground') return false;
 		},
 		onStart: function (pokemon) {
@@ -271,6 +283,7 @@ exports.BattleStatuses = {
 			}
 		},
 		onImmunity: function (type) {
+			if attacker.hasAbility(['moldbreaker', 'teravolt', 'turboblaze'])
 			if (type === 'Ground') return false;
 		},
 		onStart: function (pokemon) {
