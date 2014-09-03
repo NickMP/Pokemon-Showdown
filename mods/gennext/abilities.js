@@ -101,7 +101,11 @@ exports.BattleAbilities = {
 			if (type === 'hail') return false;
 		},
 		onResidual: function (target, source, effect) {
-			this.heal(target.maxhp / 16);
+			var healFactor = 16;
+				if this.isWeather('hail') {
+					healFactor = 8;
+				}
+			this.heal(target.maxhp / healFactor);
 		},
 		onAfterDamage: function (damage, target, source, move) {
 			if (move && move.isContact && this.isWeather('hail')) {
