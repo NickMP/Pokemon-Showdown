@@ -76,6 +76,21 @@ exports.BattleItems = {
 			}
 		}
 	},
+	"armorfossil": {
+		inherit: true,
+		onModifyDefPriority: 1,
+		onModifyDef: function (spd) {
+			return this.chainModify(1.5);
+		},
+		onModifyPokemon: function (pokemon) {
+			var moves = pokemon.moveset;
+			for (var i = 0; i < moves.length; i++) {
+				if (this.getMove(moves[i].move).category === 'Status') {
+					moves[i].disabled = true;
+				}
+			}
+		},
+	},
 	"bigroot": {
 		inherit: true,
 		onAfterMoveSecondarySelf: function (source, target) {
