@@ -113,6 +113,8 @@ exports.BattleScripts = {
 		this.modData('Pokedex', 'uxie').abilities['1'] = 'Synchronize';
 		this.modData('Pokedex', 'azelf').abilities['1'] = 'Steadfast';
 		this.modData('Pokedex', 'hydreigon').abilities['1'] = 'Sheer Force';
+		this.modData('Pokedex', 'solrock').abilities['1'] = 'solidrock';
+		this.modData('Pokedex', 'hydreigon').abilities['H'] = 'solarpower';
 
 		// Adaptability change
 		this.modData('Pokedex', 'crawdaunt').abilities['H'] = 'Tough Claws';
