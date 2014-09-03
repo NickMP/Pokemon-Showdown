@@ -150,7 +150,7 @@ exports.BattleAbilities = {
 				move.weather = null;
 				move.onHit = function (target, source) {
 					this.setWeather(weather, source, this.getAbility('flowergift'));
-					this.weatherData.duration = 0;
+					this.weatherData.duration = 10;
 				};
 				move.target = 'self';
 				move.sideCondition = 'flowergift';
@@ -162,7 +162,7 @@ exports.BattleAbilities = {
 					this.effectData.forme = 'Sunshine';
 					this.add('-formechange', pokemon, 'Cherrim-Sunshine');
 					this.add('-message', pokemon.name + ' transformed!');
-					this.boost({spd:1});
+					this.boost({spd:1, accuracy: 1});
 				}
 			} else if (pokemon.isActive && pokemon.speciesid === 'cherrim' && this.effectData.forme) {
 				delete this.effectData.forme;
