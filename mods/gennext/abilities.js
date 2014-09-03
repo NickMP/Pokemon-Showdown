@@ -37,6 +37,20 @@ exports.BattleAbilities = {
 			}
 		}
 	},
+	"solarpower": {
+		inherit: true,
+		onModifyAtkPriority: 5,
+		onModifyAtk: function (spa, pokemon) {
+			if (this.isWeather('sunnyday')) {
+				return this.chainModify(1.5);
+			}
+		},
+		onWeather: function (target, source, effect) {
+			if (effect.id === 'sunnyday') {
+				this.damage(target.maxhp / 8);
+			}
+		}
+	},
 	"thickfat": {
 		inherit:true,
 		onImmunity: function (type, pokemon) {
