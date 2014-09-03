@@ -257,18 +257,15 @@ exports.BattleStatuses = {
 			}
 		}
 	},
+	sunflora: {
+		onStart: function (source) {
+			this.setWeather('sunnyday');
+		},
+	}
 	cryogonal: {
 		// Cryogonal: infinite hail, Ice Body
-		onModifyMove: function (move) {
-			if (move.id === 'hail') {
-				var weather = move.weather;
-				move.weather = null;
-				move.onHit = function (target, source) {
-					this.setWeather(weather, source, this.getAbility('snowwarning'));
-					this.weatherData.duration = 0;
-				};
-				move.target = 'self';
-			}
+		onStart: function (source) {
+			this.setWeather('hail');
 		},
 		onImmunity: function (type) {
 			if (type === 'Ground') return false;
@@ -282,30 +279,14 @@ exports.BattleStatuses = {
 	},
 	probopass: {
 		// Probopass: infinite sand
-		onModifyMove: function (move) {
-			if (move.id === 'sandstorm') {
-				var weather = move.weather;
-				move.weather = null;
-				move.onHit = function (target, source) {
-					this.setWeather(weather, source, this.getAbility('sandstream'));
-					this.weatherData.duration = 0;
-				};
-				move.target = 'self';
-			}
-		}
-	},
+		onStart: function (source) {
+			this.setWeather('sandstorm');
+		},
+	}
 	phione: {
 		// Phione: infinite rain
-		onModifyMove: function (move) {
-			if (move.id === 'raindance') {
-				var weather = move.weather;
-				move.weather = null;
-				move.onHit = function (target, source) {
-					this.setWeather(weather, source, this.getAbility('drizzle'));
-					this.weatherData.duration = 0;
-				};
-				move.target = 'self';
-			}
-		}
+		onStart: function (source) {
+			this.setWeather('raindance');
+		},
 	}
 };
