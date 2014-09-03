@@ -260,17 +260,15 @@ exports.BattleStatuses = {
 	sunflora: {
 		onStart: function (source) {
 			this.setWeather('sunnyday');
-		},
+		}
 	}
 	cryogonal: {
 		// Cryogonal: infinite hail, Ice Body
-		onStart: function (source) {
-			this.setWeather('hail');
-		},
 		onImmunity: function (type) {
 			if (type === 'Ground') return false;
 		},
 		onStart: function (pokemon) {
+			this.setWeather('hail');
 			if (pokemon.ability === 'levitate') {
 				pokemon.ability = 'icebody';
 				pokemon.baseAbility = 'icebody';
@@ -281,12 +279,41 @@ exports.BattleStatuses = {
 		// Probopass: infinite sand
 		onStart: function (source) {
 			this.setWeather('sandstorm');
-		},
+		}
 	}
 	phione: {
 		// Phione: infinite rain
 		onStart: function (source) {
 			this.setWeather('raindance');
-		},
+		}
+	}
+	parasect: {
+		onStart: function (source) {
+			this.setWeather('raindance');
+		}
+	}
+	golem: {
+		onStart: function (source) {
+			this.setWeather('sandstorm');
+		}
+	}
+	gigalith: {
+		onStart: function (source) {
+			this.setWeather('sandstorm');
+		}
+	}
+	solrock: {
+		onStart: function (pokemon) {
+			this.setWeather('sunnyday');
+			if (pokemon.ability === 'levitate') {
+				pokemon.ability = 'solidrock';
+				pokemon.baseAbility = 'solidrock';
+			}
+		}
+	}
+	glaceon: {
+		onStart: function (source) {
+			this.setWeather('hail');
+		}
 	}
 };
