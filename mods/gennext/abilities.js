@@ -624,6 +624,11 @@ exports.BattleAbilities = {
 				pokemon.transformed = false;
 				pokemon.removeVolatile('zenmode');
 			}
+		},
+		onModifyMove: function (move) {
+			if (move.category === "Physical") {
+				move.category = "Special";	
+			}
 		}
 	},
 };
