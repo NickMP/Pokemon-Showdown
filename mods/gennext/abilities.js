@@ -603,33 +603,27 @@ exports.BattleAbilities = {
 				pokemon.addVolatile('zenmode');
 			}
 		},
-		effect: {
-			onStart: function (pokemon) {
-				if (pokemon.formeChange('Darmanitan-Zen')) {
-					this.add('-formechange', pokemon, 'Darmanitan-Zen');
-					this.add('-message', 'Zen Mode triggered! (placeholder)');
-				} else {
-					return false;
-				}
-			},
-			onEnd: function (pokemon) {
-				if (pokemon.formeChange('Darmanitan')) {
-					this.add('-formechange', pokemon, 'Darmanitan');
-					this.add('-message', 'Zen Mode ended! (placeholder)');
-				} else {
-					return false;
-				}
-			},
-			onUpdate: function (pokemon) {
-				if (!pokemon.hasAbility('zenmode')) {
-					pokemon.transformed = false;
-					pokemon.removeVolatile('zenmode');
-				}
+		onStart: function (pokemon) {
+			if (pokemon.formeChange('Darmanitan-Zen')) {
+				this.add('-formechange', pokemon, 'Darmanitan-Zen');
+				this.add('-message', 'Zen Mode triggered! (placeholder)');
+			} else {
+				return false;
 			}
 		},
-		onModifyAtkPriority: -100,
-		onModifyAtk: function (spa) {
-				return spa;
+		onEnd: function (pokemon) {
+			if (pokemon.formeChange('Darmanitan')) {
+				this.add('-formechange', pokemon, 'Darmanitan');
+				this.add('-message', 'Zen Mode ended! (placeholder)');
+			} else {
+				return false;
+			}
+		},
+		onUpdate: function (pokemon) {
+			if (!pokemon.hasAbility('zenmode')) {
+				pokemon.transformed = false;
+				pokemon.removeVolatile('zenmode');
+			}
 		}
 	},
 };
