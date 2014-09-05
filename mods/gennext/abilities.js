@@ -599,7 +599,7 @@ exports.BattleAbilities = {
 		onModifyMove: function (move) {
 			move.category = "Special";
 		},
-		onStart: function (pokemon) {
+		onSwitchIn: function (pokemon) {
 			this.add('-formechange', pokemon, 'Darmanitan-Zen');
 			this.add('-message', 'Zen Mode triggered! (placeholder)');
 		},
