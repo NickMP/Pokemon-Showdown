@@ -592,16 +592,19 @@ exports.BattleAbilities = {
 				return 100;
 			}
 		}
-	}
+	},
 	"zenmode": {
 		inherit: true,
 		onModifyMove: function (move) {
 			move.category = "Special";
 		},
-		onSwitchIn: function (pokemon) {
-			this.add('-formechange', pokemon, 'Darmanitan-Zen');
-			this.add('-message', 'Zen Mode triggered! (placeholder)');
-		},
+		onStart: function (pokemon) {
+			pokemon.addVolatile('zenmode');
+			if (pokemon.formeChange('Darmanitan-Zen')) {
+				this.add('-formechange', pokemon, 'Darmanitan-Zen');
+				this.add('-message', 'Zen Mode triggered! (placeholder)');
+			}
+		}
 		onResidual: null,
 		effect: null,
 	}
