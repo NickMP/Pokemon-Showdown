@@ -626,6 +626,10 @@ exports.BattleAbilities = {
 					pokemon.removeVolatile('zenmode');
 				}
 			}
+		},
+		onModifyAtkPriority: -100,
+		onModifyAtk: function (spa) {
+				return spa;
 		}
 	},
 };
