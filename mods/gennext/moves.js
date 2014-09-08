@@ -1333,8 +1333,8 @@ exports.BattleMovedex = {
 	slash: {
 		inherit: true,
 		basePower: 60,
-		onBasePower: function (power, user) {
-			if (user.template.id === 'persian') return power * 1.5;
+		onBasePower: function (basePower, user) {
+			if (user.template.id === 'persian') return this.chainModify(1.5);
 		},
 		secondary: {
 			chance: 30,
