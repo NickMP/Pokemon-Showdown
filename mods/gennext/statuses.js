@@ -111,8 +111,13 @@ exports.BattleStatuses = {
 
 	unown: {
 		// Unown: Shadow Tag
-		onImmunity: function (type) {
-			if (type === 'Ground') return false;
+		onImmunity: function (type, source, effect) {
+			if (type === 'Ground' && this.event.type = 'Move') return false;
+		},
+		onTryHit: function (target, source, move) {
+			if (target !== source && move.type === 'Ground') {
+					this.add('-immune', target, '[msg]');
+			}
 		},
 		onStart: function (pokemon) {
 			if (pokemon.ability === 'levitate') {
@@ -127,8 +132,13 @@ exports.BattleStatuses = {
 	},
 	bronzong: {
 		// Bronzong: Heatproof
-		onImmunity: function (type) {
-			if (type === 'Ground') return false;
+		onImmunity: function (type, source, effect) {
+			if (type === 'Ground' && effect.effectType !== 'Move') return false;
+		},
+		onTryHit: function (target, source, move) {
+			if (target !== source && move.type === 'Ground') {
+					this.add('-immune', target, '[msg]');
+			}
 		},
 		onStart: function (pokemon) {
 			if (pokemon.ability === 'levitate') {
@@ -139,8 +149,13 @@ exports.BattleStatuses = {
 	},
 	weezing: {
 		// Weezing: Aftermath
-		onImmunity: function (type) {
-			if (type === 'Ground') return false;
+		onImmunity: function (type, source, effect) {
+			if (type === 'Ground' && effect.effectType !== 'Move') return false;
+		},
+		onTryHit: function (target, source, move) {
+			if (target !== source && move.type === 'Ground') {
+					this.add('-immune', target, '[msg]');
+			}
 		},
 		onStart: function (pokemon) {
 			if (pokemon.ability === 'levitate') {
@@ -151,8 +166,13 @@ exports.BattleStatuses = {
 	},
 	flygon: {
 		// Flygon: Compoundeyes
-		onImmunity: function (type) {
-			if (type === 'Ground') return false;
+		onImmunity: function (type, source, effect) {
+			if (type === 'Ground' && effect.effectType !== 'Move') return false;
+		},
+		onTryHit: function (target, source, move) {
+			if (target !== source && move.type === 'Ground') {
+					this.add('-immune', target, '[msg]');
+			}
 		},
 		onStart: function (pokemon) {
 			if (pokemon.ability === 'levitate') {
@@ -163,8 +183,13 @@ exports.BattleStatuses = {
 	},
 	eelektross: {
 		// Eelektross: Poison Heal
-		onImmunity: function (type) {
-			if (type === 'Ground') return false;
+		onImmunity: function (type, source, effect) {
+			if (type === 'Ground' && effect.effectType !== 'Move') return false;
+		},
+		onTryHit: function (target, source, move) {
+			if (target !== source && move.type === 'Ground') {
+					this.add('-immune', target, '[msg]');
+			}
 		},
 		onStart: function (pokemon) {
 			if (pokemon.ability === 'levitate') {
@@ -175,8 +200,13 @@ exports.BattleStatuses = {
 	},
 	claydol: {
 		// Claydol: Filter
-		onImmunity: function (type) {
-			if (type === 'Ground') return false;
+		onImmunity: function (type, source, effect) {
+			if (type === 'Ground' && effect.effectType !== 'Move') return false;
+		},
+		onTryHit: function (target, source, move) {
+			if (target !== source && move.type === 'Ground') {
+					this.add('-immune', target, '[msg]');
+			}
 		},
 		onStart: function (pokemon) {
 			if (pokemon.ability === 'levitate') {
@@ -187,8 +217,13 @@ exports.BattleStatuses = {
 	},
 	gengar: {
 		// Gengar: Cursed Body
-		onImmunity: function (type, pokemon) {
-			if (pokemon.template.id !== 'gengarmega' && type === 'Ground') return false;
+		onImmunity: function (type, source, effect) {
+			if (pokemon.template.id !== 'gengarmega' && type === 'Ground' && effect.effectType !== 'Move') return false;
+		},
+		onTryHit: function (target, source, move) {
+			if (pokemon.template.id !== 'gengarmega' && target !== source && move.type === 'Ground') {
+					this.add('-immune', target, '[msg]');
+			}
 		},
 		onStart: function (pokemon) {
 			if (pokemon.ability === 'levitate') {
@@ -199,8 +234,13 @@ exports.BattleStatuses = {
 	},
 	mismagius: {
 		// Mismagius: Cursed Body
-		onImmunity: function (type) {
-			if (type === 'Ground') return false;
+		onImmunity: function (type, source, effect) {
+			if (type === 'Ground' && effect.effectType !== 'Move') return false;
+		},
+		onTryHit: function (target, source, move) {
+			if (target !== source && move.type === 'Ground') {
+					this.add('-immune', target, '[msg]');
+			}
 		},
 		onStart: function (pokemon) {
 			if (pokemon.ability === 'levitate') {
@@ -211,8 +251,13 @@ exports.BattleStatuses = {
 	},
 	mesprit: {
 		// Mesprit: Serene Grace
-		onImmunity: function (type) {
-			if (type === 'Ground') return false;
+		onImmunity: function (type, source, effect) {
+			if (type === 'Ground' && effect.effectType !== 'Move') return false;
+		},
+		onTryHit: function (target, source, move) {
+			if (target !== source && move.type === 'Ground') {
+					this.add('-immune', target, '[msg]');
+			}
 		},
 		onStart: function (pokemon) {
 			if (pokemon.ability === 'levitate') {
@@ -223,8 +268,13 @@ exports.BattleStatuses = {
 	},
 	uxie: {
 		// Uxie: Synchronize
-		onImmunity: function (type) {
-			if (type === 'Ground') return false;
+		onImmunity: function (type, source, effect) {
+			if (type === 'Ground' && effect.effectType !== 'Move') return false;
+		},
+		onTryHit: function (target, source, move) {
+			if (target !== source && move.type === 'Ground') {
+					this.add('-immune', target, '[msg]');
+			}
 		},
 		onStart: function (pokemon) {
 			if (pokemon.ability === 'levitate') {
@@ -235,8 +285,13 @@ exports.BattleStatuses = {
 	},
 	azelf: {
 		// Azelf: Steadfast
-		onImmunity: function (type) {
-			if (type === 'Ground') return false;
+		onImmunity: function (type, source, effect) {
+			if (type === 'Ground' && effect.effectType !== 'Move') return false;
+		},
+		onTryHit: function (target, source, move) {
+			if (target !== source && move.type === 'Ground') {
+					this.add('-immune', target, '[msg]');
+			}
 		},
 		onStart: function (pokemon) {
 			if (pokemon.ability === 'levitate') {
@@ -247,8 +302,13 @@ exports.BattleStatuses = {
 	},
 	hydreigon: {
 		// Hydreigon: Sheer Force
-		onImmunity: function (type) {
-			if (type === 'Ground') return false;
+		onImmunity: function (type, source, effect) {
+			if (type === 'Ground' && effect.effectType !== 'Move') return false;
+		},
+		onTryHit: function (target, source, move) {
+			if (target !== source && move.type === 'Ground') {
+					this.add('-immune', target, '[msg]');
+			}
 		},
 		onStart: function (pokemon) {
 			if (pokemon.ability === 'levitate') {
@@ -270,8 +330,13 @@ exports.BattleStatuses = {
 				move.target = 'self';
 			}
 		},
-		onImmunity: function (type) {
-			if (type === 'Ground') return false;
+		onImmunity: function (type, source, effect) {
+			if (type === 'Ground' && effect.effectType !== 'Move') return false;
+		},
+		onTryHit: function (target, source, move) {
+			if (target !== source && move.type === 'Ground') {
+					this.add('-immune', target, '[msg]');
+			}
 		},
 		onStart: function (pokemon) {
 			if (pokemon.ability === 'levitate') {
