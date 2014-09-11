@@ -112,7 +112,7 @@ exports.BattleStatuses = {
 	unown: {
 		// Unown: Shadow Tag
 		onImmunity: function (type, source, target, effect) {
-			if (type === 'Ground' && this.event.type = 'Move') return false;
+			if (type === 'Ground' && this.effecttype !== 'Move') return false;
 		},
 		onTryHit: function (target, source, move) {
 			if (target !== source && move.type === 'Ground') {
