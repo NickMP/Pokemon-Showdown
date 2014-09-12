@@ -111,10 +111,6 @@ exports.BattleStatuses = {
 
 	unown: {
 		// Unown: Shadow Tag
-		onImmunity: function (type, source, target, effect) {
-			this.add('-message', 'The effect is' + effect.effecttype +'!');
-			if (type === 'Ground' && effect.effecttype !== 'Move') return false;
-		},
 		onTryHit: function (target, source, move) {
 			if (target !== source && move.type === 'Ground') {
 					this.add('-immune', target, '[msg]');
