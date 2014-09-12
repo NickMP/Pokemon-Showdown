@@ -112,7 +112,7 @@ exports.BattleStatuses = {
 	unown: {
 		// Unown: Shadow Tag
 		onTryHit: function (target, source, move) {
-			if (target !== source && move.type === 'Ground') {
+			if (move.type === 'Ground') {
 					this.add('-immune', target, '[msg]');
 			}
 		},
@@ -133,7 +133,7 @@ exports.BattleStatuses = {
 			if (type === 'Ground' && effect.effectType !== 'Move') return false;
 		},
 		onTryHit: function (target, source, move) {
-			if (target !== source && move.type === 'Ground') {
+			if (move.type === 'Ground') {
 					this.add('-immune', target, '[msg]');
 			}
 		},
