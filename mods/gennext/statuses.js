@@ -130,7 +130,7 @@ exports.BattleStatuses = {
 	bronzong: {
 		// Bronzong: Heatproof
 		onImmunity: function (type, pokemon) {
-			if (type === 'Ground' && !pokemon.ignore['Ability'] === 'A') return false;
+			if (type === 'Ground' && pokemon.ignore['Ability'] !== 'A') return false;
 		},
 		onStart: function (pokemon) {
 			if (pokemon.ability === 'levitate') {
