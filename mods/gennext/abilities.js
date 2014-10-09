@@ -594,5 +594,19 @@ exports.BattleAbilities = {
 				return 100;
 			}
 		}
+	},
+	"damp":{
+		onStart: {
+			this.add('-ability', pokemon, 'Damp');
+		},
+		onBasePower: function (basePower, attacker, defender, move) {
+			if (move.id === 'scald' || move.id === 'steameruption') {
+				return;
+			}
+			if (move.type === 'Water') {
+				this.debug('damp boost');
+				return basePower * 1.5;
+			}
+		}
 	}
 };
