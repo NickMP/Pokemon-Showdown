@@ -596,7 +596,7 @@ exports.BattleAbilities = {
 		}
 	},
 	"damp":{
-		onStart: {
+		onStart: function() {
 			this.add('-ability', pokemon, 'Damp');
 		},
 		onBasePower: function (basePower, attacker, defender, move) {
