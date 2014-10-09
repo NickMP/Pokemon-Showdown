@@ -596,8 +596,8 @@ exports.BattleAbilities = {
 		}
 	},
 	"damp":{
-		onStart: function() {
-			this.add('-ability', pokemon, 'Damp');
+		onStart: function(pokemon) {
+			this.add('-message', pokemon.name + ' is damp!');
 		},
 		onBasePower: function (basePower, attacker, defender, move) {
 			if (move.id === 'scald' || move.id === 'steameruption') {
