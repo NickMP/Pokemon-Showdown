@@ -76,7 +76,7 @@ exports.BattleStatuses = {
 			if (move.id === 'scald' || move.id === 'steameruption') {
 				return;
 			}
-			if (move.type === 'Water') {
+			if (move.type === 'Water' && !attacker.hasAbility('damp')) {
 				this.debug('rain water boost');
 				return basePower * 1.5;
 			}
@@ -96,7 +96,7 @@ exports.BattleStatuses = {
 				this.debug('Sunny Day fire boost');
 				return basePower * 1.5;
 			}
-			if (move.type === 'Water') {
+			if (move.type === 'Water' && !attacker.hasAbility('damp')) {
 				this.debug('Sunny Day water suppress');
 				return basePower * 0.5;
 			}
