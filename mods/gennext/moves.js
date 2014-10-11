@@ -526,7 +526,7 @@ exports.BattleMovedex = {
 		accuracy: true,
 		basePower: 100,
 		willCrit: true,
-		self: null,
+		self: function () {},
 		onHit: function (target, source) {
 			if (!target.hp) {
 				source.addVolatile('mustrecharge');
@@ -538,7 +538,7 @@ exports.BattleMovedex = {
 		accuracy: true,
 		basePower: 100,
 		willCrit: true,
-		self: null,
+		self: function () {},
 		onHit: function (target, source) {
 			if (!target.hp) {
 				source.addVolatile('mustrecharge');
@@ -550,7 +550,7 @@ exports.BattleMovedex = {
 		accuracy: true,
 		basePower: 100,
 		willCrit: true,
-		self: null,
+		self: function () {},
 		onHit: function (target, source) {
 			if (!target.hp) {
 				source.addVolatile('mustrecharge');
@@ -562,7 +562,7 @@ exports.BattleMovedex = {
 		accuracy: true,
 		basePower: 100,
 		willCrit: true,
-		self: null,
+		self: function () {},
 		onHit: function (target, source) {
 			if (!target.hp) {
 				source.addVolatile('mustrecharge');
@@ -574,7 +574,7 @@ exports.BattleMovedex = {
 		accuracy: true,
 		basePower: 100,
 		willCrit: true,
-		self: null,
+		self: function () {},
 		onHit: function (target, source) {
 			if (!target.hp) {
 				source.addVolatile('mustrecharge');
@@ -586,7 +586,7 @@ exports.BattleMovedex = {
 		accuracy: true,
 		basePower: 100,
 		willCrit: true,
-		self: null,
+		self: function () {},
 		onHit: function (target, source) {
 			if (!target.hp) {
 				source.addVolatile('mustrecharge');
@@ -598,7 +598,7 @@ exports.BattleMovedex = {
 		accuracy: true,
 		basePower: 100,
 		willCrit: true,
-		self: null,
+		self: function () {},
 		onHit: function (target, source) {
 			if (!target.hp) {
 				source.addVolatile('mustrecharge');
