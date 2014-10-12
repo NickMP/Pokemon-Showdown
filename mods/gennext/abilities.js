@@ -491,8 +491,8 @@ exports.BattleAbilities = {
 			},
 			onBeforeMovePriority: 99,
 			onBeforeMove: function (pokemon, target, move) {
-				if (pokemon.ability !== 'slowstart') {
-					pokemon.removeVolatile('slowstart');
+				if (pokemon.ability !== 'truant') {
+					pokemon.removeVolatile('truant');
 					return;
 				}
 				if (pokemon.removeVolatile('truant')) {
