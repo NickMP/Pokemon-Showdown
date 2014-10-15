@@ -198,6 +198,8 @@ New mechanic: Signature Pokemon:
 
   - Persian: Slash (60 base power 30% -1 Def)
 
+  - Unown: Hidden Power
+
 - Again, note that while the Signature Pokemon will get the 1.5x damage boost,
   all Pokemon will get the other changes to the move listed above.
 
@@ -256,8 +258,8 @@ Minor move changes:
 
 - Rapid Spin now has 30 base power
 
-- Rock Throw and Rapid Spin remove hazards before fainting from Rocky
-  Helmet etc. And double in power if they remove hazards.
+- Rock Throw and Rapid Spin double in power if they remove hazards, and
+  remove hazards before fainting from Rocky Helmet etc
 
 - All moves' accuracy is rounded up to the nearest multiple of 10%
   (except Jump Kick, which will be rebalanced later)
