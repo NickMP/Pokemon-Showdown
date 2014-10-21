@@ -245,7 +245,7 @@ exports.BattleItems = {
 		isUnreleased: false,
 	},
 	"glalitite": {
-		inheritL true,
+		inherit: true,
 		isUnreleased: false,
 	},
 	"latiasite": {
@@ -261,7 +261,7 @@ exports.BattleItems = {
 		isUnreleased: false,
 	},
 	"metagrossite": {
-		inheritL true,
+		inherit: true,
 		isUnreleased: false,
 	},
 	"pidgeotite": {
