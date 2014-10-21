@@ -3,6 +3,11 @@ exports.BattleFormatsData = {
 		inherit: true,
 		tier: 'OU'
 	},
+	floetteeternalflower: {
+		inherit: true,
+		isUnreleased: false,
+		tier: "OU"
+	},
 	genesect: {
 		inherit: true,
 		tier: 'OU'
