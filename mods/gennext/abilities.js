@@ -232,19 +232,19 @@ exports.BattleAbilities = {
 	},
 	"solidrock": {
 		inherit: true,
-		onFoeBasePower: function (basePower, attacker, defender, move) {
-			if (defender.runEffectiveness(move) > 0) {
+		onSourceModifyDamage: function (damage, source, target, move) {
+			if (target.runEffectiveness(move) > 0) {
 				this.add('-message', "The attack was weakened by Solid Rock!");
-				return basePower * 1 / 2;
+				return this.chainModify(0.5);
 			}
 		}
 	},
 	"filter": {
 		inherit: true,
-		onFoeBasePower: function (basePower, attacker, defender, move) {
-			if (defender.runEffectiveness(move) > 0) {
+		onSourceModifyDamage: function (damage, source, target, move) {
+			if (target.runEffectiveness(move) > 0) {
 				this.add('-message', "The attack was weakened by Filter!");
-				return basePower * 1 / 2;
+				return this.chainModify(0.5);
 			}
 		}
 	},
