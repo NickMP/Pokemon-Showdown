@@ -118,6 +118,38 @@ exports.BattleMovedex = {
 		priority: 1
 	},
 	/******************************************************************
+	Trick Room:
+	- holding a Lustrous Orb extends duration to 8 turns
+	
+	Justification:
+	 - Trick Room is somewhat weak in singles.
+	******************************************************************/
+	"trickroom": {
+		inherit: true,
+		effect: {
+			duration: 5,
+			durationCallback: function (source, effect) {
+				if (source && source.item === 'lustrousorb') {
+					return 8;
+				}
+				return 5;
+			},
+			onStart: function (target, source) {
+				this.add('-fieldstart', 'move: Trick Room', '[of] ' + source);
+				this.getStatCallback = function (stat, statName) {
+					// If stat is speed and does not overflow (Trick Room Glitch) return negative speed.
+					if (statName === 'spe' && stat <= 1809) return -stat;
+					return stat;
+				};
+			},
+			onResidualOrder: 23,
+			onEnd: function () {
+				this.add('-fieldend', 'move: Trick Room');
+				this.getStatCallback = null;
+			}
+		}
+	},
+	/******************************************************************
 	Substitute:
 	- has precedence over Protect
 	- makes all moves hit against it
