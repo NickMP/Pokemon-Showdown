@@ -62,6 +62,8 @@ Major changes:
 - Weather-inducing abilities now last for only 5 turns (or 8 with the right
   item). Weather moves have +1 priority.
 
+- Trick Room lasts for 8 Turns if the user is Holding a Lustrous Orb.
+
 - Forecast will make weather moves last forever. Cherrim will make Sunny Day
   last forever. Phione will make Rain Dance last forever. Cryogonal will make
   Hail last forever. Probopass will make Sandstorm last forever.
@@ -198,6 +200,8 @@ New mechanic: Signature Pokemon:
 
   - Persian: Slash (60 base power 30% -1 Def)
 
+  - Unown: Hidden Power
+
 - Again, note that while the Signature Pokemon will get the 1.5x damage boost,
   all Pokemon will get the other changes to the move listed above.
 
@@ -254,10 +258,10 @@ Minor move changes:
 - Rock Throw now removes Stealth Rock from the user's side of the field,
   and has 100% accuracy
 
-- Rapid Spin now has 30 base power
+- Rapid Spin now has 30 base power and removes hazards before fainting
+  from Rocky Helmet etc
 
-- Rock Throw and Rapid Spin remove hazards before fainting from Rocky
-  Helmet etc. And double in power if they remove hazards.
+- Rock Throw and Rapid Spin double in power if they remove hazards.
 
 - All moves' accuracy is rounded up to the nearest multiple of 10%
   (except Jump Kick, which will be rebalanced later)
@@ -474,7 +478,7 @@ Minor ability changes:
 - Sand Veil grants 20% damage reduction in sand (this replaces Sand Veil's
   usual effect)
 
-- Water Veil grans 12.5% damage reduction out of rain and 25% damage
+- Water Veil grants 12.5% damage reduction out of rain and 25% damage
   reduction in rain, in addition to its usual effect
 
 - Multiscale decreases damage by 1/3 rather than 1/2 (Sorry, Dragonite,
@@ -501,7 +505,7 @@ Bans:
 
 Specifically, differences from regular OU:
 
-- unbanned: Gengarite, Kangaskhanite, Lucarionite, Blaziken, Genesect
+- unbanned: Gengarite, Kangaskhanite, Lucarionite, Mawilite, Blaziken, Genesect
 
 - banned: Kyurem, Kyurem-Black
 
